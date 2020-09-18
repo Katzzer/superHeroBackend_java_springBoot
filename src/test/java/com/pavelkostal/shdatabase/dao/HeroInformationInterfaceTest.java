@@ -23,7 +23,8 @@ class HeroInformationInterfaceTest {
             "http://localhost:8080/api/hero-information",
             "http://localhost:8080/api/hero-information/1",
             "http://localhost:8080/api/hero-name-list",
-            "http://localhost:8080/api/hero-name-list/1"
+            "http://localhost:8080/api/hero-name-list/1",
+            "http://localhost:8080/api/hero-information/search/findByHeroNameId?id=1"
     })
     public void itShouldReturnStatusOKForRequestedApi (String urlTemplate) throws Exception {
 
