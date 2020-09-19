@@ -42,6 +42,7 @@ INSERT INTO hero(hero_name) VALUES ('Ironman');
 INSERT INTO hero(hero_name) VALUES ('Spiderman');
 INSERT INTO hero(hero_name) VALUES ('Thor');
 INSERT INTO hero(hero_name) VALUES ('Captain America');
+INSERT INTO hero(hero_name) VALUES ('Thanos');
 
 -- -----------------------------------------------------
 -- Informations
@@ -57,3 +58,8 @@ INSERT INTO INFORMATIONS (FILM_NAME, ACTOR_NAME, CSFD_URL, CSFD_RATING, CATEGORY
 INSERT INTO INFORMATIONS (FILM_NAME, ACTOR_NAME, CSFD_URL, CSFD_RATING, CATEGORY_ID) VALUES ('Thor: Ragnarok', 'Chris Hemsworth','https://www.csfd.cz/film/374525-thor-ragnarok/prehled/', 82, 4);
 INSERT INTO INFORMATIONS (FILM_NAME, ACTOR_NAME, CSFD_URL, CSFD_RATING, CATEGORY_ID) VALUES ('Captain America: The First Avenger', 'Chris Evans','https://www.csfd.cz/film/227773-captain-america-prvni-avenger/prehled/', 68, 5);
 INSERT INTO INFORMATIONS (FILM_NAME, ACTOR_NAME, CSFD_URL, CSFD_RATING, CATEGORY_ID) VALUES ('Captain America: The Winter Soldier', 'Chris Evans','https://www.csfd.cz/film/303069-captain-america-navrat-prvniho-avengera/prehled/', 78, 5);
+INSERT INTO INFORMATIONS (FILM_NAME, ACTOR_NAME, CSFD_URL, CSFD_RATING, CATEGORY_ID) VALUES ('Avengers', 'Josh Brolin','https://www.csfd.cz/film/241997-avengers/prehled/', 83, 6);
+INSERT INTO INFORMATIONS (FILM_NAME, ACTOR_NAME, CSFD_URL, CSFD_RATING, CATEGORY_ID) VALUES ('Guardians of the Galaxy', 'Josh Brolin','https://www.csfd.cz/film/320638-strazci-galaxie/prehled/', 82, 6);
+INSERT INTO INFORMATIONS (FILM_NAME, ACTOR_NAME, CSFD_URL, CSFD_RATING, CATEGORY_ID) VALUES ('Avengers: Age of Ultron', 'Josh Brolin','https://www.csfd.cz/film/317410-avengers-age-of-ultron/prehled/', 73, 6);
+INSERT INTO INFORMATIONS (FILM_NAME, ACTOR_NAME, CSFD_URL, CSFD_RATING, CATEGORY_ID) VALUES ('Avengers: Infinity War', 'Josh Brolin','https://www.csfd.cz/film/393331-avengers-infinity-war/prehled/', 86, 6);
+INSERT INTO INFORMATIONS (FILM_NAME, ACTOR_NAME, CSFD_URL, CSFD_RATING, CATEGORY_ID) VALUES ('Avengers: Endgame', 'Josh Brolin','https://www.csfd.cz/film/393332-avengers-endgame/prehled/', 83, 6);
