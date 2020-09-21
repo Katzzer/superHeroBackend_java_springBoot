@@ -1,12 +1,13 @@
-package com.pavelkostal.shdatabase.dao;
+package com.pavelkostal.shdatabase.dao.depreciatedTest;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.*;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.HttpClientBuilder;
+import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -15,8 +16,10 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
-class HeroInformationInterfaceTest {
+class HeroInformationInterfaceTestDEPRECIATED {
 
+    @Ignore
+    @Disabled
     @ParameterizedTest
     @CsvSource({
             "http://localhost:8080/api",
@@ -45,6 +48,8 @@ class HeroInformationInterfaceTest {
     @DisplayName("Test for not allowed method - PUT, POST, DELETE")
     class allTestsForUsersWithToken {
 
+        @Ignore
+        @Disabled
         @ParameterizedTest
         @CsvSource({
                 "http://localhost:8080/api/hero-information/1",
@@ -67,6 +72,8 @@ class HeroInformationInterfaceTest {
                     equalTo(405));
         }
 
+        @Ignore
+        @Disabled
         @ParameterizedTest
         @CsvSource({
                 "http://localhost:8080/api/hero-information",
@@ -89,6 +96,8 @@ class HeroInformationInterfaceTest {
                     equalTo(405));
         }
 
+        @Ignore
+        @Disabled
         @ParameterizedTest
         @CsvSource({
                 "http://localhost:8080/api/hero-information/1",
