@@ -1,16 +1,19 @@
 package com.pavelkostal.shdatabase.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.*;
 import java.util.Set;
 
 @Entity
 @Table(name = "hero")
 @Getter
 @Setter
+@NoArgsConstructor
 public class HeroName {
 
     @Id
@@ -22,7 +25,10 @@ public class HeroName {
     private String heroName;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "heroName")
+    @JsonBackReference
     private Set<HeroInformation> heroInformation;
 
-
+    public HeroName(String heroName) {
+        this.heroName = heroName;
+    }
 }

@@ -1,12 +1,16 @@
 package com.pavelkostal.shdatabase.entity;
 
-import lombok.Data;
-
-import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "information")
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
 public class HeroInformation {
 
     @Id
@@ -15,7 +19,8 @@ public class HeroInformation {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "category_id", nullable = false)
+    @JoinColumn(name = "hero_name_id", nullable = false)
+    @JsonManagedReference
     private HeroName heroName;
 
     @Column(name = "film_name")
@@ -28,7 +33,13 @@ public class HeroInformation {
     private String csfdUrl;
 
     @Column(name = "csfd_rating")
-    private String csfdRating;
+    private int csfdRating;
 
-
+    public HeroInformation(HeroName heroName, String filmName, String actorName, String csfdUrl, int csfdRating) {
+        this.heroName = heroName;
+        this.filmName = filmName;
+        this.actorName = actorName;
+        this.csfdUrl = csfdUrl;
+        this.csfdRating = csfdRating;
+    }
 }
