@@ -36,7 +36,7 @@ public class SuperHeroDatabaseApplication implements RepositoryRestConfigurer { 
 		return args -> {
 			HeroName batman = new HeroName("Batman");
 			HeroName ironman = new HeroName("Ironman");
-			HeroName spiderman = new HeroName("Spiderman");
+			HeroName spiderMan = new HeroName("Spider-man");
 			HeroName thor = new HeroName("Thor");
 			HeroName captainAmerica = new HeroName("Captain America");
 			HeroName thanos = new HeroName("Thanos");
@@ -44,7 +44,7 @@ public class SuperHeroDatabaseApplication implements RepositoryRestConfigurer { 
 			List<HeroName> listOfHeroNames = new ArrayList<>();
 			listOfHeroNames.add(batman);
 			listOfHeroNames.add(ironman);
-			listOfHeroNames.add(spiderman);
+			listOfHeroNames.add(spiderMan);
 			listOfHeroNames.add(thor);
 			listOfHeroNames.add(captainAmerica);
 			listOfHeroNames.add(thanos);
@@ -54,8 +54,8 @@ public class SuperHeroDatabaseApplication implements RepositoryRestConfigurer { 
 			HeroInformation film2 = new HeroInformation(batman, "Batman", "Michael Keateon","https://www.csfd.cz/film/1069-batman/prehled/", 81);
 			HeroInformation film3 = new HeroInformation(ironman, "Iron Man", "Robert Downey Jr.","https://www.csfd.cz/film/223262-iron-man/prehled/", 82);
 			HeroInformation film4 = new HeroInformation(ironman, "Iron Man 2", "Robert Downey Jr.","https://www.csfd.cz/film/242570-iron-man-2/prehled/", 82);
-			HeroInformation film5 = new HeroInformation(spiderman, "Spider-Man", "Tobey Maguire","https://www.csfd.cz/film/7563-spider-man/prehled/", 76);
-			HeroInformation film6 = new HeroInformation(spiderman, "Spider-Man 2", "Tobey Maguire","https://www.csfd.cz/film/116933-spider-man-2/prehled/", 74);
+			HeroInformation film5 = new HeroInformation(spiderMan, "Spider-Man", "Tobey Maguire","https://www.csfd.cz/film/7563-spider-man/prehled/", 76);
+			HeroInformation film6 = new HeroInformation(spiderMan, "Spider-Man 2", "Tobey Maguire","https://www.csfd.cz/film/116933-spider-man-2/prehled/", 74);
 			HeroInformation film7 = new HeroInformation(thor, "Thor", "Chris Hemsworth","https://www.csfd.cz/film/234300-thor/prehled/", 75);
 			HeroInformation film8 = new HeroInformation(thor, "Thor: The Dark World", "Chris Hemsworth","https://www.csfd.cz/film/299231-thor-temny-svet/prehled/", 72);
 			HeroInformation film9 = new HeroInformation(thor, "Thor: Ragnarok", "Chris Hemsworth","https://www.csfd.cz/film/374525-thor-ragnarok/prehled/", 82);
