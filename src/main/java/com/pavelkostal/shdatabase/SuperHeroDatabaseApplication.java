@@ -9,16 +9,26 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
+import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication
 @EnableFeignClients
-public class SuperHeroDatabaseApplication {
+public class SuperHeroDatabaseApplication implements RepositoryRestConfigurer { // only to expose id directly accessed from Repository
 
 	public static void main(String[] args) {
 		SpringApplication.run(SuperHeroDatabaseApplication.class, args);
+	}
+
+
+	// this will expose id for rest api that is directly accessed from Repository
+	@Override
+	public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
+		config.exposeIdsFor(HeroName.class);
 	}
 
 	@Bean
