@@ -7,12 +7,14 @@ import com.pavelkostal.shdatabase.repository.HeroNameRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication
+@EnableFeignClients
 public class SuperHeroDatabaseApplication {
 
 	public static void main(String[] args) {
@@ -28,7 +30,7 @@ public class SuperHeroDatabaseApplication {
 			HeroName thor = new HeroName("Thor");
 			HeroName captainAmerica = new HeroName("Captain America");
 			HeroName thanos = new HeroName("Thanos");
-			
+
 			List<HeroName> listOfHeroNames = new ArrayList<>();
 			listOfHeroNames.add(batman);
 			listOfHeroNames.add(ironman);
@@ -37,7 +39,7 @@ public class SuperHeroDatabaseApplication {
 			listOfHeroNames.add(captainAmerica);
 			listOfHeroNames.add(thanos);
 			heroNameRepository.saveAll(listOfHeroNames);
-			
+
 			HeroInformation film1 = new HeroInformation(batman, "Batman Begins", "Christian Bale", "https://www.csfd.cz/film/136224-batman-zacina/prehled/", 86);
 			HeroInformation film2 = new HeroInformation(batman, "Batman", "Michael Keateon","https://www.csfd.cz/film/1069-batman/prehled/", 81);
 			HeroInformation film3 = new HeroInformation(ironman, "Iron Man", "Robert Downey Jr.","https://www.csfd.cz/film/223262-iron-man/prehled/", 82);
@@ -72,7 +74,7 @@ public class SuperHeroDatabaseApplication {
 			listOfFilms.add(film14);
 			listOfFilms.add(film15);
 			listOfFilms.add(film16);
-			
+
 			heroInformationRepository.saveAll(listOfFilms);
 		};
 	}
