@@ -1,22 +1,18 @@
 package com.pavelkostal.shdatabase.controller;
 
-import com.pavelkostal.shdatabase.entity.HeroInformation;
-import com.pavelkostal.shdatabase.entity.HeroName;
 import com.pavelkostal.shdatabase.externalApiCalls.SuperHeroApi;
 import com.pavelkostal.shdatabase.model.SuperHeroModelFromPublicApi;
-import com.pavelkostal.shdatabase.repository.HeroInformationRepository;
-import com.pavelkostal.shdatabase.repository.HeroNameRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin()
+@CrossOrigin({"http://localhost:4200", "http://localhost:8081", "https://pavelkostal-superheroapi.herokuapp.com", "http://superheroapi.pavelkostal.com"})
 @AllArgsConstructor
 public class ApiController {
 
-    private HeroNameRepository heroNameRepository;
-    private HeroInformationRepository heroInformationRepository;
+//    private HeroNameRepository heroNameRepository;
+//    private HeroInformationRepository heroInformationRepository;
     SuperHeroApi superHeroApi;
 
 //    @GetMapping("/hero-name-list")
