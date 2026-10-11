@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin({"http://localhost:4200", "http://localhost:8081", "https://pavelkostal-superheroapi.herokuapp.com", "http://superheroapi.pavelkostal.com"})
+@CrossOrigin({"http://localhost:4200", "http://localhost:8081", "https://superhero-api-frontend-547e763e62a9.herokuapp.com", "http://superheroapi.pavelkostal.com"})
 @AllArgsConstructor
 public class ApiController {
 

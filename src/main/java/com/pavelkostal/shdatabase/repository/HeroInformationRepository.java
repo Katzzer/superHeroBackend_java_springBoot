@@ -8,7 +8,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@CrossOrigin({"http://localhost:4200", "http://localhost:8081", "https://pavelkostal-superheroapi.herokuapp.com", "http://superheroapi.pavelkostal.com"})
+@CrossOrigin({"http://localhost:4200", "http://localhost:8081", "https://superhero-api-frontend-547e763e62a9.herokuapp.com", "http://superheroapi.pavelkostal.com"})
 @RepositoryRestResource(collectionResourceRel = "heroInformation", path="hero-information")
 //@Repository
 public interface HeroInformationRepository extends JpaRepository <HeroInformation, Long> {
